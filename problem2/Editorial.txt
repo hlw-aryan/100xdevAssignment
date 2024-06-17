@@ -1,0 +1,21 @@
+Given two strings `s1` and `s2`, where `s1` has exactly one more character than `s2`, the task is to find positions in `s1` where deleting one character can make `s1` identical to `s2`.
+
+Approach:
+1. Matching Prefix and Suffix:
+   - Traverse through both strings from the beginning to find the length of the matching prefix (`beg`).
+   - Similarly, traverse from the end to find the length of the matching suffix (`end`).
+
+2. Check Deletion Condition:
+   - Determine if `beg + end + 1 >= n`, where `n` is the length of `s2`.
+   - If true, then it's possible to delete one character to align `s1` with `s2`.
+
+3. Calculate Deletion Positions:
+   - Calculate the range of positions where deletions can occur:
+     - From `max(n - end + 1, 1)` to `min(beg + 1, n + 1)`.
+
+4. Output:
+   - Print the number of valid positions where deletions can make `s1` identical to `s2`.
+   - Output these positions in increasing order.
+
+Time Complexity: O(n) - Both prefix and suffix lengths are found in linear time relative to the size of s2.
+Space Complexity: O(1) - The additional space used is constant.

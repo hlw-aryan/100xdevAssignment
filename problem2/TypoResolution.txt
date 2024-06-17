@@ -1,0 +1,47 @@
+Typo Resolution
+
+As a developer working on an advanced text editor, you've noticed that users often make typing errors, resulting in extra letters in their words. To enhance the user experience, you want to build a smart autocorrect feature. One common scenario is when users accidentally add an extra letter, and the word can be corrected by removing just one letter to match a word from the dictionary.
+
+Your task is to create a function that takes an incorrectly typed word and a correct dictionary word, and determines which letter should be removed from the typed word to match the dictionary word. This feature will automatically correct the user's input by identifying and suggesting the exact letter that needs to be deleted.
+
+Input:
+
+An integer n (1<=n<=10^5) representing the size of the dictionary word (length of the second string).
+Two strings:
+    The first string is the incorrectly typed word with an extra character.
+    The second string is the correct dictionary word.
+
+Output:
+
+- Print the number of positions in the typed word where deleting a single character would make it identical to the dictionary word.
+- On the second line, output these positions in increasing order, separated by spaces.- = - Positions are numbered starting from 1.
+- If it is impossible to make the typed word identical to the dictionary word by deleting one character, output the number 0.
+
+Eg1.
+
+Input
+3
+abbc
+abc
+
+Output
+2
+2 3
+
+Explaination
+2 -> (denoting there are two positions where deleting one character from the first string can make it identical to the second string).
+2 3 -> (these are the positions of characters in the first string that should be removed, listed in increasing order).
+
+
+Eg2.
+
+Input
+3
+abbd
+adb
+
+Output
+0
+
+Explaination
+Deleting a single character from the first string cannot make the typed word identical to the second string.
