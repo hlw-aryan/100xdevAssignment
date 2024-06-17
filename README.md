@@ -1,7 +1,7 @@
 # 100xdevAssignment
 Problem Setter Assignment
 
-Due to time constraint I wasn't able to add strong test case (larger value for n), but i will add it soon (using genrater code).
+Due to time constraint I wasn't able to add strong test case (larger value for n), but i will add it soon (using generator code).
 
 Some of my previous work as Problem Setter Role:
 
