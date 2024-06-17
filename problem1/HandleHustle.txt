@@ -1,0 +1,41 @@
+Handle Hustle
+
+Imagine you're building an online social media platform called "SocialSphere," and you're tasked with creating the user registration system. The platform is gearing up for a major launch and needs your help to implement a prototype for user registration. Here's how it should work:
+
+Every time a new user wants to sign up, they send their desired username to the system. If the username doesn't already exist in the system's database, it gets added, and the user receives a response "OK," confirming successful registration. 
+
+However, if the username is already taken, the system must generate a new unique username. This is done by appending numbers, starting from 1, to the original username (e.g., username1, username2, etc.). The system finds the smallest available number that creates a unique username, suggests this new username to the user, and also adds it to the database. 
+
+For example, if the username "john" is taken, the system will suggest "john1," and if "john1" is also taken, it will suggest "john2," and so on, until it finds an available username.
+
+Input
+The first line contains the number of registration requests n (1 ≤  n  ≤ 100,000). The following n lines each contain a username request. Each username request is a non-empty string consisting of up to 32 lowercase english letters.
+
+Output
+Print n lines with the system's responses to the registration requests: "OK" if the username was successfully registered, or a new suggested username if the requested name was already taken.
+
+Ex.
+
+Input
+5
+one
+onne
+one
+onee
+one
+
+Output
+OK
+OK
+one1
+OK
+one2
+
+Explaination:
+OK -> ("one",if the username was successfully registered)
+OK -> ("onne",if the username was successfully registered)
+one1 -> ("one" is already registered, next available username)
+OK -> ("onee",if the username was successfully registered)
+one2 -> ("one","one1" is already registered, next available username)
+
+

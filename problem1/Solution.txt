@@ -1,0 +1,32 @@
+This program handles user registration requests for a social media platform, ensuring each username is unique. Here's how it works:
+
+1. Input Reading:
+   - The program first reads the number of registration requests.
+   - It then processes each request one by one.
+
+2. Username Handling:
+   - For each requested username, the program checks if it already exists in a map (a data structure that stores key-value pairs).
+   - If the username does not exist, it is added to the map with a value of 0, and the program outputs "OK" to indicate successful registration.
+   - If the username already exists, the program increments the count associated with that username in the map and suggests a new username by appending this count to the original username (e.g., "username1", "username2", etc.). This new username is then outputted and stored in the map.
+
+3. Output:
+   - The program prints "OK" for successful registrations or the new unique username if the original was taken.
+
+This way, every username in the system is unique, either as initially requested or modified with a numerical suffix.
+
+Time Complexity:
+
+Since the loop iterates n times, the overall time complexity of the code is: O(n * log m)
+Where:
+    n is the number of iterations (input size)
+    m is the number of elements in the Map container
+
+Space Complexity:
+
+Map Storage:
+    The map Map stores each unique username along with its corresponding count. In the worst case, if all usernames are unique, the map will store n usernames.
+
+In summary:
+
+Time Complexity: O(n * log m)
+Space Complexity: O(n)
